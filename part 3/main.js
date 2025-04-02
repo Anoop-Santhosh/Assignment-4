@@ -29,8 +29,7 @@ class Ball {
         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         ctx.fill();
     }
-
-    // ball position and handle wall collisions
+  // ball position and handle wall collisions
     update() {
         if ((this.x + this.size) >= width) {
             this.velX = -(this.velX);
@@ -75,33 +74,28 @@ while (balls.length < 25) {
         // Ensure ball is drawn at least one ball width away from edge
         random(0 + size, width - size),
         random(0 + size, height - size),
-        random(-7, 7),
-        random(-7, 7),
+        random(-5, 5),
+        random(-5, 5),
         randomRGB(),
         size
     );
 
     balls.push(ball);
 }
-
 // Animation loop
 function loop() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
     ctx.fillRect(0, 0, width, height);
-
     // Update and draw all balls
     for (const ball of balls) {
         ball.draw();
         ball.update();
         ball.collisionDetect();
     }
-
     requestAnimationFrame(loop);
 }
-
 // Start the animation
 loop();
-
 // Handle window resize
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
