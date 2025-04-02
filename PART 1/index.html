@@ -9,7 +9,10 @@ Silly story generator with random replacements and unit conversion.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    
     <title>Silly story generator</title>
+ 
+    <!-- Embedded CSS styling -->
     <style>
         body {
             font-family: helvetica, sans-serif;
@@ -40,16 +43,20 @@ Silly story generator with random replacements and unit conversion.
     </style>
 </head>
 <body>
+    <!-- Name input section -->
     <div>
         <label for="customname">Enter custom name:</label>
         <input id="customname" type="text" placeholder="">
     </div>
+    
+    <!-- Unit selection -->
     <div>
         <label for="us">US</label>
         <input id="us" type="radio" name="ukus" value="us" checked>
         <label for="uk">UK</label>
         <input id="uk" type="radio" name="ukus" value="uk">
     </div>
+    <!-- Story generation -->
     <div>
         <button class="randomize">Generate random story</button>
     </div>
