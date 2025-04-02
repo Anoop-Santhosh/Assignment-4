@@ -20,7 +20,7 @@ imageFilenames.forEach(filename => {
   newImage.setAttribute('src', `images/${filename}`);
   newImage.setAttribute('alt', altTexts[filename]);
   
-  // Add click event 
+  // Add click 
   newImage.addEventListener('click', () => {
     displayedImage.setAttribute('src', `images/${filename}`);
     displayedImage.setAttribute('alt', altTexts[filename]);
