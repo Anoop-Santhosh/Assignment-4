@@ -43,12 +43,10 @@ class Ball {
         if ((this.y - this.size) <= 0) {
             this.velY = -(this.velY);
         }
-
         // Update position
         this.x += this.velX;
         this.y += this.velY;
     }
-
     // collisions with other balls
     collisionDetect() {
         for (const ball of balls) {
@@ -64,7 +62,6 @@ class Ball {
         }
     }
 }
-
 // Create balls array
 const balls = [];
 // Populate with balls
@@ -79,7 +76,6 @@ while (balls.length < 25) {
         randomRGB(),
         size
     );
-
     balls.push(ball);
 }
 // Animation loop
